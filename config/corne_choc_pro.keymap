@@ -138,10 +138,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q          &kp W              &kp E                 &kp R           &kp T        &none  &none  &kp Y        &kp U           &kp I                 &kp O               &kp P                       &kp BSPC
-&kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G        &none  &none  &kp H        &HRM_R RCTRL J  &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &kp DELETE
-&kp LSHFT   &kp Z          &kp X              &kp C                 &kp V           &kp B                      &kp N        &kp M           &DTap_Comma           &DTap_Period        &DTap_Slash                 &kp RIGHT_SHIFT
-                                              &mo 4                 &lt 1 SPACE     &lt 2 ENTER                &lt 3 ENTER  &lt 2 SPACE     &kp RSHIFT
+&kp ESCAPE  &kp Q          &kp W              &kp E                 &kp R           &kp T      &none  &none  &kp Y        &kp U            &kp I                 &kp O               &kp P                       &kp BSPC
+&kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G      &none  &none  &kp H        &HRM_R RCTRL J   &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &kp DELETE
+&kp LSHFT   &kp Z          &kp X              &kp C                 &kp V           &kp B                    &kp N        &kp M            &DTap_Comma           &DTap_Period        &DTap_Slash                 &kp RIGHT_SHIFT
+                                              &lt 4 ESCAPE          &lt 1 SPACE     &lt 2 TAB                &lt 3 ENTER  &lt 2 BACKSPACE  &kp LS(DELETE)
             >;
         };
 
