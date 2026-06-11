@@ -141,7 +141,7 @@
 &kp ESCAPE  &kp Q          &kp W              &kp E                 &kp R           &kp T      &none  &none  &kp Y        &kp U            &kp I                 &kp O               &kp P                       &kp BSPC
 &kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G      &none  &none  &kp H        &HRM_R RCTRL J   &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &kp DELETE
 &kp LSHFT   &kp Z          &kp X              &kp C                 &kp V           &kp B                    &kp N        &kp M            &DTap_Comma           &DTap_Period        &DTap_Slash                 &kp RIGHT_SHIFT
-                                              &lt 4 ESCAPE          &lt 1 SPACE     &lt 2 TAB                &lt 3 ENTER  &lt 2 BACKSPACE  &kp LS(DELETE)
+                                              &lt 4 ESCAPE          &lt 1 SPACE     &lt 2 TAB                &lt 3 ENTER  &lt 2 BACKSPACE  &kp DELETE
             >;
         };
 
@@ -174,7 +174,7 @@
             bindings = <
 &R_DOUBLE_COLON  &kp QUESTION     &kp AT         &kp HASH         &kp DLLR   &kp PRCNT  &none  &none  &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN   &kp SLASH  &trans
 &R_ASSIGN        &kp EXCLAMATION  &kp AMPERSAND  &kp ASTERISK     &kp EQUAL  &kp HASH   &none  &none  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp BSLH   &trans
-&R_PIPE          &kp CARET        &kp TILDE      &kp RIGHT_BRACE  &kp PLUS   &kp SQT                  &kp UNDER      &kp LEFT_BRACE        &trans                 &trans             &kp PIPE   &trans
+&R_PIPE          &kp CARET        &kp TILDE      &kp RIGHT_BRACE  &kp PLUS   &kp SQT                  &kp UNDER      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SQT            &kp PIPE   &trans
                                                  &trans           &trans     &trans                   &trans         &trans                &trans
             >;
         };
