@@ -179,10 +179,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&R_DOUBLE_COLON  &kp QUESTION     &kp AT         &kp HASH         &kp DLLR   &kp PRCNT  &none  &none  &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN   &kp SLASH  &trans
-&R_ASSIGN        &kp EXCLAMATION  &kp AMPERSAND  &kp ASTERISK     &kp EQUAL  &kp HASH   &none  &none  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp BSLH   &trans
-&R_PIPE          &kp CARET        &kp TILDE      &kp RIGHT_BRACE  &kp PLUS   &kp SQT                  &kp UNDER      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SQT            &kp PIPE   &trans
-                                                 &trans           &trans     &trans                   &trans         &trans                &trans
+&R_DOUBLE_COLON  &kp QUESTION     &kp AT         &kp HASH        &kp DLLR   &kp PRCNT     &none  &none  &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN   &kp SLASH  &trans
+&R_ASSIGN        &kp EXCLAMATION  &kp AMPERSAND  &kp UNDERSCORE  &kp EQUAL  &kp PLUS      &none  &none  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp BSLH   &trans
+&R_PIPE          &kp CARET        &kp TILDE      &kp SLASH       &kp MINUS  &kp ASTERISK                &kp GRAVE      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SQT            &kp PIPE   &trans
+                                                 &trans          &trans     &trans                      &trans         &trans                &trans
             >;
         };
 
