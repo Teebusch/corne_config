@@ -123,6 +123,13 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp NON_US_BACKSLASH>, <&kp PIPE>;
         };
+
+        my_caps_word: my_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "MY_CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDERSCORE BACKSPACE DELETE MINUS>;
+        };
     };
 
     keymap {
@@ -139,7 +146,7 @@
 
             bindings = <
 &kp ESCAPE  &kp Q          &kp W              &kp E                 &kp R           &kp T      &none  &none  &kp Y        &kp U            &kp I                 &kp O               &kp P                       &kp BSPC
-&kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G      &none  &none  &kp H        &HRM_R RCTRL J   &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &kp DELETE
+&kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G      &none  &none  &kp H        &HRM_R RCTRL J   &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &caps_word
 &kp LSHFT   &kp Z          &kp X              &kp C                 &kp V           &kp B                    &kp N        &kp M            &DTap_Comma           &DTap_Period        &DTap_Slash                 &kp RIGHT_SHIFT
                                               &lt 4 ESCAPE          &lt 1 SPACE     &lt 2 TAB                &lt 3 ENTER  &lt 2 BACKSPACE  &kp DELETE
             >;
@@ -156,8 +163,8 @@
 
             bindings = <
 &trans  &kp LA(TAB)  &trans        &trans      &trans     &trans  &none  &none  &kp PAGE_UP    &mt LC(BACKSPACE) BACKSPACE  &kp UP_ARROW    &mt LC(DELETE) DELETE  &trans     &trans
-&trans  &kp LCMD     &kp LEFT_ALT  &kp LSHIFT  &kp LCTRL  &trans  &none  &none  &kp PAGE_DOWN  &mt HOME LEFT_ARROW          &kp DOWN_ARROW  &mt END RIGHT_ARROW    &kp ENTER  &trans
-&trans  &trans       &trans        &kp LC(C)   &kp LC(V)  &trans                &kp INSERT     &kp TAB                      &trans          &trans                 &trans     &trans
+&trans  &kp LCMD     &kp LEFT_ALT  &kp LSHIFT  &kp LCTRL  &trans  &none  &none  &kp PAGE_DOWN  &kp LEFT                     &kp DOWN_ARROW  &kp RIGHT              &kp ENTER  &trans
+&trans  &kp LC(Z)    &kp LC(X)     &kp LC(C)   &kp LC(V)  &trans                &kp INSERT     &kp HOME                     &trans          &kp END                &trans     &trans
                                    &trans      &trans     &trans                &msc SCRL_UP   &msc SCRL_DOWN               &trans
             >;
         };
@@ -182,21 +189,32 @@
         Numbers {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans  &trans
-&trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans  &trans  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                    &trans        &trans        &trans                  &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &sl 5         &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                        &trans  &trans  &trans                  &trans        &trans        &trans
             >;
         };
 
         System {
             display-name = "SYSTEM";
             bindings = <
-&trans  &trans        &trans           &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans        &trans        &trans                          &trans  &trans  &trans
+&trans  &rgb_ug RGB_ON  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans  &trans  &trans  &trans       &trans      &trans  &trans  &trans
+&trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans  &trans  &trans  &trans       &trans      &trans  &trans  &trans
+&trans  &bt BT_CLR      &rgb_ug RGB_TOG  &sys_reset       &bootloader      &studio_unlock                   &trans  &bootloader  &sys_reset  &trans  &trans  &trans
+                                         &trans           &trans           &trans                           &trans  &trans       &trans
             >;
+        };
+
+        F-Keys {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
+                        &trans  &trans  &trans                  &trans   &trans  &trans
+            >;
+
+            label = "FKEY";
         };
     };
 };
