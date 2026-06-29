@@ -145,10 +145,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q          &kp W              &kp E                 &kp R           &kp T      &none  &none  &kp Y        &kp U            &kp I                 &kp O               &kp P                       &kp BSPC
-&kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G      &none  &none  &kp H        &HRM_R RCTRL J   &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &caps_word
-&kp LSHFT   &kp Z          &kp X              &kp C                 &kp V           &kp B                    &kp N        &kp M            &DTap_Comma           &DTap_Period        &DTap_Slash                 &kp RIGHT_SHIFT
-                                              &lt 4 ESCAPE          &lt 2 TAB       &lt 1 SPACE              &lt 3 ENTER  &lt 2 BACKSPACE  &kp DELETE
+&kp ESCAPE  &kp Q          &kp W              &kp E                 &kp R           &kp T        &none  &none  &kp Y        &kp U            &kp I                 &kp O               &kp P                       &kp BSPC
+&kp TAB     &HMR_L LCMD A  &HMR_L LEFT_ALT S  &HRM_ShiftL LSHIFT D  &HMR_L LCTRL F  &kp G        &none  &none  &kp H        &HRM_R RCTRL J   &HRM_ShiftR RSHIFT K  &HRM_R RIGHT_ALT L  &HRM_R RIGHT_GUI SEMICOLON  &caps_word
+&kp LSHFT   &kp Z          &kp X              &kp C                 &kp V           &kp B                      &kp N        &kp M            &DTap_Comma           &DTap_Period        &DTap_Slash                 &kp RIGHT_SHIFT
+                                              &lt 4 ESCAPE          &lt 2 TAB       &lt 1 SPACE                &lt 3 ENTER  &lt 2 BACKSPACE  &kp DELETE
             >;
         };
 
@@ -189,8 +189,8 @@
         Numbers {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &sl 5         &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &sl 5
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                         &trans  &trans  &trans                  &trans        &trans        &trans
             >;
@@ -199,10 +199,10 @@
         System {
             display-name = "SYSTEM";
             bindings = <
-&trans  &rgb_ug RGB_ON  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans  &trans  &trans  &trans       &trans      &trans  &trans  &trans
-&trans  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans  &trans  &trans  &trans       &trans      &trans  &trans  &trans
-&trans  &bt BT_CLR      &rgb_ug RGB_TOG  &sys_reset       &bootloader      &studio_unlock                   &trans  &bootloader  &sys_reset  &trans  &trans  &trans
-                                         &trans           &trans           &trans                           &trans  &trans       &trans
+&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans  &trans  &trans  &trans       &trans      &trans  &trans  &trans
+&trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans  &trans  &trans  &trans       &trans      &trans  &trans  &rgb_ug RGB_TOG
+&trans  &bt BT_CLR       &rgb_ug RGB_TOG  &sys_reset       &bootloader      &studio_unlock                   &trans  &bootloader  &sys_reset  &trans  &trans  &trans
+                                          &trans           &trans           &trans                           &trans  &trans       &trans
             >;
         };
 
